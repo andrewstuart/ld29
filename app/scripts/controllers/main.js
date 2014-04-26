@@ -36,36 +36,36 @@ angular.module('underDarknessApp')
       });
     }
 
-    var defaultVelocity = 150;
+    $scope.defaultVelocity = 150;
 
     function update () {
       player.body.velocity.x = 0;
       player.body.velocity.y = 0;
 
       if(wasd.a.isDown) {
-        player.body.velocity.x -= defaultVelocity;
+        player.body.velocity.x -= $scope.defaultVelocity;
       }
       if(wasd.d.isDown) {
-        player.body.velocity.x += defaultVelocity;
+        player.body.velocity.x += $scope.defaultVelocity;
       }
       if(wasd.w.isDown) {
-        player.body.velocity.y -= defaultVelocity;
+        player.body.velocity.y -= $scope.defaultVelocity;
       }
       if(wasd.s.isDown) {
-        player.body.velocity.y += defaultVelocity;
+        player.body.velocity.y += $scope.defaultVelocity;
       }
 
       if(cursors.left.isDown) {
-        player.body.velocity.x -= defaultVelocity;
+        player.body.velocity.x -= $scope.defaultVelocity;
       }
       if (cursors.right.isDown) {
-        player.body.velocity.x += defaultVelocity;
+        player.body.velocity.x += $scope.defaultVelocity;
       }
       if(cursors.up.isDown) {
-        player.body.velocity.y -= defaultVelocity;
+        player.body.velocity.y -= $scope.defaultVelocity;
       }
       if(cursors.down.isDown) {
-        player.body.velocity.y += defaultVelocity;
+        player.body.velocity.y += $scope.defaultVelocity;
       }
 
       if(player.body.velocity.x || player.body.velocity.y) {
